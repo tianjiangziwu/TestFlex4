@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx">
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<s:ArrayCollection id="myAC">
+			<fx:Object label="yzx1"/>
+			<fx:Object label="yzx1"/>
+			<fx:Object label="yzx1"/>
+		</s:ArrayCollection>
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			[Bindable]
+			public var myAC2:ArrayCollection = new ArrayCollection([
+				{name:"Dan Orlando", email:"dan@domain.com",
+					url:"http://danorlando.com"},
+				{name:"Tariq Ahmed", email:"tariq@domain.com",
+					url:"http://www.flexinaction.com"},
+				{name:"John C Bland II", email:"john@domain.com",
+					url:"http://www.johncblandii.com"},
+				{name:"John C Bland II1", email:"john@domain.com",
+					url:"http://www.johncblandii.com"},
+				{name:"Dan Orlando", email:"dan@domain.com",
+					url:"http://danorlando.com"},
+				{name:"Tariq Ahmed", email:"tariq@domain.com",
+					url:"http://www.flexinaction.com"},
+				{name:"John C Bland II", email:"john@domain.com",
+					url:"http://www.johncblandii.com"},
+				{name:"John C Bland II1", email:"john@domain.com",
+					url:"http://www.johncblandii.com"},
+				{name:"Dan Orlando", email:"dan@domain.com",
+					url:"http://danorlando.com"},
+				{name:"Tariq Ahmed", email:"tariq@domain.com",
+					url:"http://www.flexinaction.com"},
+				{name:"John C Bland II", email:"john@domain.com",
+					url:"http://www.johncblandii.com"},
+				{name:"John C Bland II1", email:"john@domain.com",
+					url:"http://www.johncblandii.com"},
+				{name:"Dan Orlando", email:"dan@domain.com",
+					url:"http://danorlando.com"},
+				{name:"Tariq Ahmed", email:"tariq@domain.com",
+					url:"http://www.flexinaction.com"},
+				{name:"John C Bland II", email:"john@domain.com",
+					url:"http://www.johncblandii.com"},
+				{name:"John C Bland II1", email:"john@domain.com",
+					url:"http://www.johncblandii.com"},
+				{name:"Dan Orlando", email:"dan@domain.com",
+					url:"http://danorlando.com"},
+				{name:"Tariq Ahmed", email:"tariq@domain.com",
+					url:"http://www.flexinaction.com"},
+				{name:"John C Bland II", email:"john@domain.com",
+					url:"http://www.johncblandii.com"},
+				{name:"John C Bland II1", email:"john@domain.com",
+					url:"http://www.johncblandii.com"},
+				{name:"Dan Orlando", email:"dan@domain.com",
+					url:"http://danorlando.com"},
+				{name:"Tariq Ahmed", email:"tariq@domain.com",
+					url:"http://www.flexinaction.com"},
+				{name:"John C Bland II", email:"john@domain.com",
+					url:"http://www.johncblandii.com"},
+				{name:"John C Bland II1", email:"john@domain.com",
+					url:"http://www.johncblandii.com"}
+			]);
+			
+			private function test(value:Object):String
+			{
+				return (value as String) + "1";
+			}
+		]]>
+		
+	</fx:Script>
+	<s:DataGrid width="100%" id="dg" dataProvider="{myAC2}" focusEnabled="false"
+				editable="true" requestedMinRowCount="4" requestedMaxRowCount="6"
+				>
+		<s:columns> 
+			<s:ArrayList>
+				<s:GridColumn headerText="Name" dataField="name" editable="true" labelFunction="test"/> 
+				<s:GridColumn headerText="Url" dataField="url" editable="true"/> 
+			</s:ArrayList>
+		</s:columns> 
+	</s:DataGrid>
+</s:WindowedApplication>
