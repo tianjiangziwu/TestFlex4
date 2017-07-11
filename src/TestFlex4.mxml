@@ -75,5 +75,5 @@
 	<s:layout>
 		<s:VerticalLayout paddingLeft="200" paddingTop="200"/>
 	</s:layout>
-	<s:List dataProvider="{myAC2}" labelField="name"/>
+	<s:DropDownList dataProvider="{myAC2}" labelField="name" width="200" prompt="hello world"/>
 </s:WindowedApplication>
