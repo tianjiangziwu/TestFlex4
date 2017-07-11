@@ -73,7 +73,7 @@
 		
 	</fx:Script>
 	<s:layout>
-		<s:VerticalLayout paddingLeft="20" paddingTop="20"/>
+		<s:VerticalLayout paddingLeft="200" paddingTop="200"/>
 	</s:layout>
 	<s:List dataProvider="{myAC2}" labelField="name"/>
 </s:WindowedApplication>
